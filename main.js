@@ -1,4 +1,4 @@
-let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbx3Xu0EtALoTa0rRLwErFG4lq6TmzcecZlpUWjSfUSfzk_Jsjc9Un4DEOhrl9iSeilIfQ/exec';
+let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbx6sInwubS47WDy3314fdkeT9Yv1DXKXkwq0CTUjezE4LkRH4cyCqDIXjDx0xVCX2IIdg/exec';
 
 let RESPONSES = {
     "Very busy": ['Tutoring is unusually busy at the moment.', 'darkred', 'There may be very long wait times.'],
