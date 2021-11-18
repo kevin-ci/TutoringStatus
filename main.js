@@ -2,7 +2,7 @@ let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbzv6ezhuezQYuVRVfptgke
 
 let RESPONSES = {
     "Very busy": ['Tutoring is unusually busy at the moment.', 'darkred', 'There may be very long wait times.'],
-    "Not busy": ['Tutoring is relatively quiet at the moment.', 'green', 'There should be limited wait times.'],
+    "Not busy": ['Tutoring is relatively quiet at the moment.', 'green', 'There should be minimal wait times.'],
     "A little busy": ['Tutoring is a little busy at the moment.', 'amber', 'There may be short to medium wait times.'],
     "Quite busy": ['Tutoring is busy at the moment.', 'red', 'There may be long wait times.'],
     "Offline": ['Tutoring is currently offline.', 'red', 'Service will resume soon.']
