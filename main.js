@@ -1,4 +1,4 @@
-let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbwxAlGLGICY_8pbyoLdoQ1_uEOAXA_pFsruagHSn6eRrdidtL_cYofDqoL1hx4kPBJv0w/exec';
+let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbx3Xu0EtALoTa0rRLwErFG4lq6TmzcecZlpUWjSfUSfzk_Jsjc9Un4DEOhrl9iSeilIfQ/exec';
 
 let RESPONSES = {
     "Very busy": ['Tutoring is unusually busy at the moment.', 'darkred', 'There may be very long wait times.'],
@@ -13,11 +13,15 @@ async function fetchAndSetStatus() {
 
     if (response.status === 200) {
         let data = await response.text();
+        data = JSON.parse(data);
+        let tutorStatus = data.tStatus;
+        let timeUpdated = new Date(data.time);
         let iconElement = document.getElementById('status-icon');
         iconElement.innerHTML = FA_ICON;
-        iconElement.classList.add(RESPONSES[data][1]);
-        document.getElementById('status-text').innerText = RESPONSES[data][0];
-        document.getElementById('wait-info').innerText = RESPONSES[data][2];
+        iconElement.classList.add(RESPONSES[tutorStatus][1]);
+        document.getElementById('status-text').innerText = RESPONSES[tutorStatus][0];
+        document.getElementById('wait-info').innerText = RESPONSES[tutorStatus][2];
+        document.getElementById('last-update').innerText = `Information updates every 30 minutes. \n Last updated: ${timeUpdated.toLocaleString('en-GB', { timeZone: 'UTC' })} UTC`;
     }
     else {
         document.getElementById('status-text').innerText = "An error occurred.";
