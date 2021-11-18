@@ -1,10 +1,11 @@
-let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbx6sInwubS47WDy3314fdkeT9Yv1DXKXkwq0CTUjezE4LkRH4cyCqDIXjDx0xVCX2IIdg/exec';
+let GOOGLE_API = 'https://script.google.com/macros/s/AKfycbzv6ezhuezQYuVRVfptgkeYYgoGQlw3P8A3tCR5pQ-gH7ghZes37BR4uHPB0vvzxf5jcg/exec';
 
 let RESPONSES = {
     "Very busy": ['Tutoring is unusually busy at the moment.', 'darkred', 'There may be very long wait times.'],
     "Not busy": ['Tutoring is relatively quiet at the moment.', 'green', 'There should be limited wait times.'],
     "A little busy": ['Tutoring is a little busy at the moment.', 'amber', 'There may be short to medium wait times.'],
-    "Quite busy": ['Tutoring is busy at the moment.', 'red', 'There may be long wait times.']
+    "Quite busy": ['Tutoring is busy at the moment.', 'red', 'There may be long wait times.'],
+    "Offline": ['Tutoring is currently offline.', 'red', 'Service will resume soon.']
 };
 let FA_ICON = `<i class="fas fa-circle"></i>`;
 
